@@ -5,7 +5,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ViewTaskComponent } from './view-task/view-task.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { AlertComponent } from './alert/alert.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -25,6 +25,10 @@ const routes: Routes = [
   },
 {path:'dashboard',
 component:DashboardComponent
+},
+{
+  path:'alert',
+  component:AlertComponent
 },
 {path:'',redirectTo:'login', pathMatch:'full'},
 {path:'**',redirectTo:'login'}

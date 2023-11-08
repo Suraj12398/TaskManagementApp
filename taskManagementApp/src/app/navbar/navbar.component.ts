@@ -9,11 +9,15 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
 
   constructor(private router: Router) {}
-
+  showSuccessAlert: boolean = false;
   logout() {
    
       localStorage.setItem('user', JSON.stringify(null));
-      this.router.navigate(["/login"]);
+      this.showSuccessAlert = true;
+        setTimeout(() => {
+          this.router.navigate(["/login"]);
+        }, 3000);
+      
     
   }
 }

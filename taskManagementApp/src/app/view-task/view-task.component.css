@@ -3,16 +3,27 @@ table {
     border-collapse: collapse;
     margin-bottom: 20px;
     margin: auto;
+    
   }
   
   th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    text-align: center;
+    
   }
-  
+  td{
+    font-size: larger;
+    font-weight: 700;
+    color: rgb(41, 41, 41);
+    padding: 30px;
+  }
   th {
     background-color: #f2f2f2;
+    font-size: x-large;
+    font-weight: 800;
+    
   }
   
   button {

@@ -2,24 +2,31 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
-    width: 95vw;
+    width: 93vw;
     border: 2px solid silver;
     padding-left: 50px;
     padding-right: 50px;
     align-items: center;
-    background-color: rgb(246, 196, 125);
+    background-color:#7678ed;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     text-align: center;
+    color: white;
+    
+}
+h1{
+    padding-left: 35%;
+    font-family: cursive;
 }
 button{
-    background-color: rgb(255, 0, 34);
+    background-color: #f18701;
     border: 0;
-    padding: 5px;
+    padding: 10px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    width: 100px;
 }
 
 button:hover {
-    background-color: #c92b13;
+    background-color:  #f49d2b;
   }

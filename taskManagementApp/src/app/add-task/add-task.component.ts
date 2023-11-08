@@ -14,6 +14,7 @@ export class AddTaskComponent {
     status: 'todo',
     user: { id: 0 } 
   };
+  showSuccessAlert: boolean = false;
 
   constructor(private http: HttpClient) {
     this.loadUserIdFromLocalStorage();
@@ -39,6 +40,10 @@ export class AddTaskComponent {
       .subscribe(
         (response) => {
           console.log('Task added successfully:', response);
+          this.showSuccessAlert=true;
+          setTimeout(()=>{
+            window.location.reload();
+          },3000)
         },
         (error) => {
           console.error('Error adding task:', error);

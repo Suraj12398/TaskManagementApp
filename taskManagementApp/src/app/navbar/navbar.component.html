@@ -1,4 +1,5 @@
 <div id="nav">
     <h1>Task Management App</h1>
     <button (click)="logout()">LogOut</button>
+    <app-alert *ngIf="showSuccessAlert" type="error" title="Success" message="Logging Out successfully"></app-alert>
 </div>

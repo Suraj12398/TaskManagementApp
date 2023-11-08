@@ -1,28 +1,33 @@
 <div class="wrapper">
-   <div class="card-switch">
-       <label class="switch">
-           <input class="toggle" type="checkbox">
-           <span class="slider"></span>
-           <span class="card-side"></span>
-           <div class="flip-card__inner">
-               <div class="flip-card__front">
-                   <div class="title">Log in</div>
-                   <form (ngSubmit)="onLogin(email.value, password.value)" class="flip-card__form">
-                       <input type="email" placeholder="Email" #email class="flip-card__input">
-                       <input type="password" placeholder="Password" #password class="flip-card__input">
-                       <button type="submit" class="flip-card__btn">Let's go!</button>
-                   </form>
-               </div>
-               <div class="flip-card__back">
-                   <div class="title">Sign up</div>
-                   <form (ngSubmit)="onSignup(name.value, emailSignUp.value, passwordSignUp.value)" class="flip-card__form">
-                       <input type="text" placeholder="Name" #name class="flip-card__input">
-                       <input type="email" placeholder="Email" #emailSignUp class="flip-card__input">
-                       <input type="password" placeholder="Password" #passwordSignUp class="flip-card__input">
-                       <button type="submit" class="flip-card__btn">Confirm!</button>
-                   </form>
-               </div>
-           </div>
-       </label>
-   </div>   
+    
+    
+    <div class="main">
+        <input class="toggle" type="checkbox" id="chk" aria-hidden="true">
+    
+        <div class="login">
+            <form class="form" (ngSubmit)="onLogin(email.value, password.value)">
+                <label for="chk" aria-hidden="true">Log in</label>
+                <input class="input" type="email" name="email" placeholder="Email" #email>
+                <input class="input" type="password" name="pswd" placeholder="Password" #password>
+                <app-alert *ngIf="showSuccessAlert" type="success" title="Success" message="Logged in successfully"></app-alert>
+                <app-alert *ngIf="showFailedAlert" type="error" title="Error" message="Logged in Failed"></app-alert>
+                
+                <button type="submit">Log in</button>
+            </form>
+        </div>
+    
+        <div class="register">
+            <form class="form" (ngSubmit)="onSignup(name.value, emailSignUp.value, passwordSignUp.value)">
+                <label for="chk" aria-hidden="true">Register</label>
+                <input class="input" type="text" name="txt" placeholder="Username" #name>
+                <input class="input" type="email" name="email" placeholder="Email" #emailSignUp>
+                <input class="input" type="password" name="pswd" placeholder="Password" #passwordSignUp>
+                <app-alert *ngIf="showSuccessAlert" type="success" title="Success" message="Registered successfully"></app-alert>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    
+    
 </div>
+ 

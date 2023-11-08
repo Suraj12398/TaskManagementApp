@@ -21,7 +21,7 @@ public class Tasks {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
 
-    @Size(max = 10, message = "title should be of 10 letters")
+    @Size(max = 20, message = "title should be of 10 letters")
     private String title;
 
     @Size(min = 1, max = 60, message = "description should be between 1 and 60 characters")

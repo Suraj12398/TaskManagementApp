@@ -1,10 +1,36 @@
+<app-sidebar></app-sidebar>
 <div id="main">
+
     <app-navbar></app-navbar>
-    
-      <div id="subMain">
-        <app-add-task></app-add-task>
-        <app-view-task></app-view-task>
+      <div id="welcomeMsg">
+        Welcome <span>{{userData.name}} </span>
       </div>
-      
+      <div id="taskInfo">
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-inner">{{hpTaskN}}<br>High Priority Tasks</div>
+        </div>
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-inner">{{mpTaskN}}<br>Medium Priority Tasks</div>
+        </div>
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-inner">{{lpTaskN}}<br>Low Priority Tasks</div>
+        </div>
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-inner">{{todoTN}}<br>TODO Tasks</div>
+        </div>
+
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-inner">{{inProN}}<br>In Progress Tasks</div>
+        </div>
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-inner">{{compN}}<br>Completed Tasks</div>
+        </div>
+      </div>
       <router-outlet></router-outlet>
     </div>

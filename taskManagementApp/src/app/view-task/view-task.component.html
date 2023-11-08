@@ -1,4 +1,11 @@
+<app-sidebar></app-sidebar>
+<div>
+  <app-navbar></app-navbar>
+
+  <app-alert *ngIf="showUpdatedAlert" type="success" title="Success" message="Task Updated Successfully"></app-alert>
+  <app-alert *ngIf="showDeletedAlert" type="success" title="Success" message="Task Deleted Successfully"></app-alert>
 <table>
+  
     <thead>
       <tr>
         <th>ID</th>
@@ -10,6 +17,7 @@
       </tr>
     </thead>
     <tbody>
+      
       <tr *ngFor="let task of tasks">
         <td>{{ task.id }}</td>
         <td>
@@ -44,4 +52,4 @@
       </tr>
     </tbody>
   </table>
-  
+</div>

@@ -9,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class ViewTaskComponent implements OnInit {
   tasks: any[] = [];
   userData: any;
-
+  showUpdatedAlert: boolean = false;
+  showDeletedAlert: boolean = false;
   constructor(private http: HttpClient) {
     const userDataString = localStorage.getItem('user');
     this.userData = userDataString ? JSON.parse(userDataString) : null;
@@ -43,6 +44,10 @@ export class ViewTaskComponent implements OnInit {
     this.http.delete(url)
       .subscribe(() => {
         this.fetchTasks();
+        this.showDeletedAlert=true;
+        setTimeout(()=>{
+          window.location.reload();
+        },3000)
       });
   }
 
@@ -57,6 +62,11 @@ export class ViewTaskComponent implements OnInit {
       .subscribe(() => {
         task.editing = false;
         this.fetchTasks();
+
+        this.showUpdatedAlert=true;
+        setTimeout(()=>{
+          window.location.reload();
+        },3000)
       });
   }
 }

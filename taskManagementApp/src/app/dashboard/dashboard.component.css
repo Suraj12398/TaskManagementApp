@@ -4,8 +4,22 @@
     margin: auto;
     margin-top: 0px;
     flex-direction: column;
+    text-align: center;
 }
 
+#welcomeMsg{
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(249, 249, 250);
+    
+    background-color: #7c8af6;
+    border-radius: 50px;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+}
 #subMain{
     display: flex;
     width: 90vw;
@@ -13,3 +27,57 @@
     justify-content: space-around;
 margin-top: 100px;
 }
+
+#taskInfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 60vw;
+    margin: auto;
+    border: 2px;
+    gap: 20px;
+    padding: 50px;
+}
+
+.card {
+    --bg: #e8e8e8;
+    --contrast: #e2e0e0;
+    --grey: #93a1a1;
+    position: relative;
+    padding: 9px;
+    background-color: var(--bg);
+    border-radius: 35px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: auto;
+  }
+  .card-inner:hover{
+    padding: 10px;
+    font-size: 40px;
+    transition: 1s;
+  }
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
+    filter: opacity(10%) contrast(105%);
+    
+  }
+  
+  .card-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 190px;
+    height: 254px;
+    background-color: var(--contrast);
+    border-radius: 30px;
+    /* Content style */
+    font-size: 30px;
+    font-weight: 900;
+    color: #5c5959;
+    text-align: center;
+    font-family: monospace;
+  }

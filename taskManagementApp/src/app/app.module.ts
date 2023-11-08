@@ -11,6 +11,8 @@ import { ViewTaskComponent } from './view-task/view-task.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ViewTaskComponent,
     LogInComponent,
     AddTaskComponent,
-    DashboardComponent
+    DashboardComponent,
+    SidebarComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+/* Your styles for the sidebar go here */
+.sidebar {
+    height: 100%;
+    width:200px;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    background-color: #3d348b;
+    transition: 1s;
+    padding-top: 100px;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+.content button{
+    position: fixed;
+    width: 50px;
+    background-color: transparent;
+    border: 0px;
+}
+ul li{
+    
+    font-size: larger;
+    list-style-type: none;
+    text-align: center;
+    
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.sidebar ul{
+   padding-inline-start: 0;
+   
+}
+ul li a{
+    text-decoration: unset;
+    color: white;
+    vertical-align: middle;
+    
+}
+
+ul li:hover{
+    color: rgb(224, 224, 224);
+    background-color: #4337b0;
+    width: 100%;
+    border-radius: 10%;
+    margin-top: 30px;
+    transition: 1s;
+}

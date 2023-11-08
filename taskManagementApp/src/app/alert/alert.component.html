@@ -1,0 +1,6 @@
+<div class="alert" [ngClass]="{ 'success': type === 'success', 'error': type === 'error' }">
+    <span class="close" (click)="closeAlert()">&times;</span>
+    <strong>{{ title }}</strong>
+    <p>{{ message }}</p>
+  </div>
+  
