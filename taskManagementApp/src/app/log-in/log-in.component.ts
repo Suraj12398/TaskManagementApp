@@ -22,7 +22,7 @@ export class LogInComponent {
        
         localStorage.setItem('user', JSON.stringify(response));
         alert("Logged In Successfully");
-        this.router.navigate(['/']);
+        this.router.navigate(['/dashboard']);
         
       }, error => {
         

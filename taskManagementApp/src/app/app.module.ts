@@ -10,6 +10,7 @@ import { ViewTaskComponent } from './view-task/view-task.component';
 
 import { LogInComponent } from './log-in/log-in.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddTaskComponent,
     ViewTaskComponent,
     LogInComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

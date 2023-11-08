@@ -44,7 +44,7 @@ export class AddTaskComponent {
           console.error('Error adding task:', error);
         }
       );
-
+      
    
     this.task = {
       title: '',
@@ -53,5 +53,7 @@ export class AddTaskComponent {
       status: 'todo',
       user: { id: this.task.user.id } 
     };
+
+    window.location.reload();
   }
 }

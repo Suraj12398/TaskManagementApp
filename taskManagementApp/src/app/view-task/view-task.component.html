@@ -37,9 +37,9 @@
           </select>
         </td>
         <td>
-          <button *ngIf="!task.editing" (click)="editTask(task)">Edit</button>
-          <button *ngIf="task.editing" (click)="updateTask(task)">Update</button>
-          <button (click)="deleteTask(task.id)">Delete</button>
+          <button *ngIf="!task.editing" (click)="editTask(task)" id="updateBut">Edit</button>
+          <button *ngIf="task.editing" (click)="updateTask(task)" id="updateBut" >Update</button>
+          <button (click)="deleteTask(task.id)" id="delBut">Delete</button>
         </td>
       </tr>
     </tbody>

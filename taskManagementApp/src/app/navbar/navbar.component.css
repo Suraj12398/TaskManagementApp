@@ -7,7 +7,19 @@
     padding-left: 50px;
     padding-right: 50px;
     align-items: center;
-    background-color: bisque;
+    background-color: rgb(246, 196, 125);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     text-align: center;
 }
+button{
+    background-color: rgb(255, 0, 34);
+    border: 0;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c92b13;
+  }
