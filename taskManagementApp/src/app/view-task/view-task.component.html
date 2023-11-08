@@ -1,0 +1,47 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.id }}</td>
+        <td>
+          <span *ngIf="!task.editing">{{ task.title }}</span>
+          <input *ngIf="task.editing" type="text" [(ngModel)]="task.title">
+        </td>
+        <td>
+          <span *ngIf="!task.editing">{{ task.description }}</span>
+          <input *ngIf="task.editing" type="text" [(ngModel)]="task.description">
+        </td>
+        <td>
+          <span *ngIf="!task.editing">{{ task.status }}</span>
+          <select *ngIf="task.editing" [(ngModel)]="task.status">
+            <option value="todo">To Do</option>
+            <option value="inprogress">In Progress</option>
+            <option value="done">Done</option>
+          </select>
+        </td>
+        <td>
+          <span *ngIf="!task.editing">{{ task.priority }}</span>
+          <select *ngIf="task.editing" [(ngModel)]="task.priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </td>
+        <td>
+          <button *ngIf="!task.editing" (click)="editTask(task)">Edit</button>
+          <button *ngIf="task.editing" (click)="updateTask(task)">Update</button>
+          <button (click)="deleteTask(task.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
