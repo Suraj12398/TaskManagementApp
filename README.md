@@ -5,15 +5,19 @@ The Task Management Application is designed to help users manage their tasks eff
 
 ## Features
 - **Login and Signup:** Users can register for a new account or log in using their credentials.
-
+-------------------------------------------------------------------------------------------------------------
 <img align="center" src="/Images/login.png" />
 <img align="center" src="/Images/signup.png" />
 
 - **Dashboard:** Provides a user-specific task dashboard.
+-------------------------------------------------------------------------------------------------------------
+
 <img align="center" src="/Images/dashboard.png" />
 <img align="center" src="/Images/sidebar.png" />
 
 - **Task Management:** Add, view, update, and delete tasks.
+-------------------------------------------------------------------------------------------------------------
+
 <img align="center" src="/Images/addTask.png" />
 <img align="center" src="/Images/view&UpdateTask.png" />
 
