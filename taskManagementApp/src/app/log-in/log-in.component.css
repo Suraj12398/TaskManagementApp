@@ -8,11 +8,12 @@
   border-radius: 12px;
   box-shadow: 7px 7px 10px 3px #24004628;
   margin: auto;
+  
 }
 .wrapper{
   width: 500px;
   margin: auto;
-  padding-top: 80px;
+  padding-top: 50px;
   height: 100vh;
 }
 .form {
