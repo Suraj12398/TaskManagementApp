@@ -11,6 +11,8 @@ export class ViewTaskComponent implements OnInit {
   userData: any;
   showUpdatedAlert: boolean = false;
   showDeletedAlert: boolean = false;
+  myData: any[]=[];
+
   constructor(private http: HttpClient) {
     const userDataString = localStorage.getItem('user');
     this.userData = userDataString ? JSON.parse(userDataString) : null;
@@ -22,6 +24,8 @@ export class ViewTaskComponent implements OnInit {
     } else {
       console.error("User data not found in localStorage");
     }
+
+    this.fetchTasks2();
   }
 
   fetchTasks(): void {
@@ -37,7 +41,23 @@ export class ViewTaskComponent implements OnInit {
     }
   }
 
+  // https://jsonplaceholder.typicode.com/posts
 
+
+  fetchTasks2(): void {
+      const apiUrl = `https://jsonplaceholder.typicode.com/posts`;
+      this.http.get<any[]>(apiUrl)
+        .subscribe((data: any) => {
+          
+          
+
+          this.myData = data;
+
+
+          console.log(this.myData)
+        });
+    
+  }
   deleteTask(taskId: number): void {
     const apiUrl = `http://localhost:8080/tasks`;
     const url = `${apiUrl}/${taskId}`;

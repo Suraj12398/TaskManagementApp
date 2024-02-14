@@ -52,4 +52,10 @@
       </tr>
     </tbody>
   </table>
+
+  <div *ngFor="let data of myData" >
+    <h1 *ngIf="data.id==1">title :- {{data.title}}</h1>
+    <p *ngIf="data.id==1">body :- {{data.body}}</p>
+    
+  </div>
 </div>
